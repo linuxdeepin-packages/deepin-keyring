@@ -1,0 +1,19 @@
+Source: deepin-keyring
+Section: misc
+Priority: optional
+Maintainer: YunQiang Su <wzssyqa@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), gnupg (>= 1.0.6-4)
+Standards-Version: 3.9.2
+Homepage: http://www.linuxdeepin.com/
+Vcs-Git: git://github.com/linuxdeepin-packages/deepin-keyring.git
+Vcs-Browser: https://github.com/linuxdeepin-packages/deepin-keyring
+
+Package: deepin-keyring
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: gnupg (>= 1.0.6-4)
+Description: GnuPG keys of Deepin Developers
+ The Deepin project wants developers to digitally sign the
+ announcements of their packages with GnuPG, to protect against
+ forgeries.  This package contains keyrings of GnuPG and keys of
+ developers.

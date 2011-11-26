@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+%:
+	dh $@ 
+
+KEY_ID=KEYID
+IN_DIR=INDIR
+
+override_dh_auto_build:
+	for i in `ls . |grep deepin`; do \
+	    cat $$i/*-0x*.gpg >> $$i/$$i.gpg; \
+	done
+
+override_dh_auto_test:
+	for i in `ls . |grep deepin*`; do \
+	    echo "For $$i"; \
+	    gpg --homedir $$i --keyring=$$i/$$i.gpg --list-keys; \
+	done
+
+add-key:
+	cd ${IN_DIR}; \
+	gpg --homedir ${IN_DIR} --keyserver keyserver.ubuntu.com --recv-keys ${KEY_ID}
+

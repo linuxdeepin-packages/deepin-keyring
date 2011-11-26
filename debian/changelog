@@ -1,0 +1,6 @@
+deepin-keyring (2011.11.26) oneiric; urgency=low
+
+  * Initial release.
+  * Add keys of: Mingdong Wang, YunQiang Su, Cheng Zhang and Aron Xu.
+
+ -- YunQiang Su <wzssyqa@gmail.com>  Sat, 26 Nov 2011 16:06:31 +0800

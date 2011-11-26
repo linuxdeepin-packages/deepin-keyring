@@ -1,0 +1,7 @@
+deepin-keyring for Debian
+-------------------------
+
+to add an new key, run
+    debian/rules KEY_ID=0x12345678 IN_DIR=debian-master-keyring
+
+ -- YunQiang Su <wzssyqa@gmail.com>  Sat, 26 Nov 2011 16:06:31 +0800
