@@ -1,3 +1,4 @@
 deepin*/deepin-*.gpg
 deepin*/pubring.gpg
-trustdb.gpg
+deepin*/trustdb.gpg
+deepin*/secring.gpg

@@ -4,8 +4,8 @@
 %:
 	dh $@ 
 
-KEY_ID=KEYID
-IN_DIR=INDIR
+KEY_ID=${KEYID}
+IN_DIR=${INDIR}
 
 override_dh_auto_build:
 	for i in `ls . |grep deepin`; do \
@@ -19,6 +19,7 @@ override_dh_auto_test:
 	done
 
 add-key:
-	cd ${IN_DIR}; \
 	gpg --homedir ${IN_DIR} --keyserver keyserver.ubuntu.com --recv-keys ${KEY_ID}
+	mv ${IN_DIR}/pubring.gpg ${IN_DIR}/new.gpg
+	dh_clean
 
